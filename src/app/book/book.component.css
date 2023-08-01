@@ -1,0 +1,109 @@
+/* Styles for .container */
+.container {
+  margin: 20px;
+}
+
+/* Styles for h1 */
+h1 {
+  color: blue;
+}
+
+/* Styles for .table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Styles for .table th */
+.table th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Styles for .table td */
+.table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Styles for .btn */
+.btn {
+  margin: 5px;
+}
+
+/* Styles for .form-group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Styles for .form-group label */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Styles for .form-control */
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styles for .btn-success */
+.btn-success {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styles for .btn-success:hover */
+.btn-success:hover {
+  background-color: #45a049;
+}
+
+/* Styles for .btn-primary */
+.btn-primary {
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Styles for .btn-primary */
+.btn-blue {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 100%;
+}
+
+/* Styles for .btn-primary */
+.btn-green {
+  background-color: #00ff00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 100%;
+}
+/* Styles for .btn-primary:hover */
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for .btn-danger */
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styles for .btn-danger:hover */
+.btn-danger:hover {
+  background-color: #c82333;
+}

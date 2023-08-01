@@ -1,27 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
-import { AppComponent } from './app.component';
-import { CognitoService } from './cognito-service/cognito.service';
-import { AddBookComponent } from './add-book/add-book.component';
-import { UpdateBookComponent } from './update-book/update-book.component';
-import { DeleteBookComponent } from './delete-book/delete-book.component';
-import { ListBooksComponent } from './list-books/list-books.component';
+import { BookComponent } from './book/book.component';
+import { BookService } from './book.service';
+import  ConfirmDialogComponentComponent  from './confirm-dialog-component/confirm-dialog-component.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AddBookComponent,
-    UpdateBookComponent,
-    DeleteBookComponent,
-    ListBooksComponent
+    BookComponent,
+    ConfirmDialogComponentComponent
   ],
   imports: [
-    BrowserModule,FormsModule
+    BrowserModule,FormsModule,HttpClientModule,BrowserAnimationsModule,MatDialogModule//,NgbModule
   ],
-  providers: [CognitoService],
-  bootstrap: [AppComponent]
+  providers: [BookService],
+  bootstrap: [BookComponent]
 })
 export class AppModule { }

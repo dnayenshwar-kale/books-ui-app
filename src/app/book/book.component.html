@@ -1,0 +1,72 @@
+<!-- book.component.html -->
+<div class="container">
+  <h1>Book List</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>
+          
+          <button class="btn btn-green" (click)="viewBooks(book)">view</button>
+          <button class="btn btn-blue" (click)="selectBook(book)">Edit</button>
+          <button class="btn btn-danger" (click)="openConfirmDialog(book.id)">Delete</button>
+        <!--  <button class="btn btn-danger" (click)="deleteBook(book.id)">Delete</button>-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ <br/> 
+<button mat-raised-button color="primary" (click)="addBooks()">Add New Book</button>
+<p *ngIf="bookDeleted">{{bookDeleted}}</p>
+<h2 *ngIf="viewBook">view Book</h2>
+  <form *ngIf="viewBook">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" [(ngModel)]="viewBook.title" class="form-control" readonly>
+    </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author" [(ngModel)]="viewBook.author" class="form-control" readonly>
+    </div>
+  </form>
+
+  <h2 *ngIf="selectedBook">Edit Book</h2>
+  <p *ngIf="bookupdated">{{bookupdated}}</p>
+  <form *ngIf="selectedBook" (ngSubmit)="updateBook(selectedBook)">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" [(ngModel)]="selectedBook.title" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author" [(ngModel)]="selectedBook.author" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+  </form>
+
+  <h2 *ngIf="addBook">Create Book</h2>
+  <p *ngIf="bookCreated">{{ bookCreated}}</p>
+  <form *ngIf="addBook"  #bookForm="ngForm" (ngSubmit)="createBook(bookForm.value)">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" ngModel class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author" ngModel class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success">Create</button>
+  </form>
+
+</div>
+
