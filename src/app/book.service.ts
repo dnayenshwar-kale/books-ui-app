@@ -14,7 +14,7 @@ export interface Book {
 })
 export class BookService {
 
-  private baseUrl = 'https://93b88aa4d7.execute-api.us-east-1.amazonaws.com/books/api/book';
+  private baseUrl = 'https://zzya6gxb24.execute-api.us-east-1.amazonaws.com/books/api/book';
 
  
  constructor(private http: HttpClient) {
