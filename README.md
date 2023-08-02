@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
+# git remote command 
+git remote set-url origin https://github.com/dnayenshwar-kale/books-ui-app.git
+git remote -v
+git remote add origin https://github.com/dnayenshwar-kale/books-ui-app.git
+git push -u origin master
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
